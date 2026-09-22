@@ -17,7 +17,7 @@ Max discharge current: ~1.6A (depends on load resistance).
 
 It can be easily expanded to support an arbitrary number of batteries: each INA module handles up to three independent channels. I2C expanders can be used to accommodate a larger number of INA modules.
 
-# Breadboard
+# Wiring diagram
 ![Breadboard](./breadboard.png)
 
 # Сircuit diagram
