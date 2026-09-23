@@ -42,9 +42,16 @@ It is also possible to replace the TP5100 modules with standard TP4056 ones; thi
 | V1                  |      1 | power unit / input     | 6-18V, 5+A (min 60W total power)       |
 
 **Not listed**:
- - Channel switch button (add it to any arduino pin of your choice)
+ - LCD channel switch button (not shown on the diagrams, add it to any arduino pin of your choice)
  - 12-24V fan (for cooling load resistors and TP5100)
  - Heatsink (a standard 70x22mm SSD heatsink is ideal for four TP5100 modules, place it UNDER the modules via heat-resistant isolation tape)
  - Additional capacitors (ceramic and/or electrolytic) at the TP5100 input and at the fan input (to reduce voltage drops)
  - Connection wires
  - Open stand or case
+
+# Important notes
+You must use an INA3221 module with independent channels (there should be no electrical continuity between the IN+ pins).
+
+Active cooling is required for prolonged operation: the TP5100, load resistors, and MOSFETs will generate significant heat.
+
+Never leave batteries unattended while charging or discharging!
