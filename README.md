@@ -30,15 +30,15 @@ It is also possible to replace the TP5100 modules with standard TP4056 ones; thi
 | Arduino             |      1 | Arduino Nano           | Rev. 3.0 used                          |
 | M2, M3              |      2 | INA3221 module         | separate channels version              |
 | M4–M7               |      4 | TP5100 module          | 1A charge current                      |
-| M1                  |      1 | LM2596 DC-DC converter | stable power supply to the logic circuitry       |
+| M1                  |      1 | LM2596 DC-DC converter | stable power supply to the logic circuitry  |
 | LCD                 |      1 | LCD with I²C-bus       | 1602 LCD or your choice                |
 | Q1–Q4               |      4 | AO3400 MOSFET          | alt name: A09T, SOT-23                 |
 | R2-R4, R9-R13       |      8 | 220 Ω resisor          | LED and Arduino pins protection        |
 | R5-R8               |      4 | 10 kΩ resisor          | MOSFET pull-up                         |
-| R14-R17             |      4 | 2.7 Ω power resisor    | Discharge load resistor                |
+| R14-R17             |      4 | 2.7 Ω power resisor    | Discharge load resistor, 5-10W rated   |
 | LED1–LED4           |      4 | 3-5mm LED              | Discharge load indication              |
 | S1–S4               |      4 | SPDT switch            | 2A constant load capable               |
-| BAT1–BAT4           |      4 | Battery                | testing/charging batteries             |
+| BAT1–BAT4           |      4 | battery holder         | pay close attention to the polarity    |
 | V1                  |      1 | power unit / input     | 8-18V, 5+A (min 60W total power)       |
 
 **Not listed**:
