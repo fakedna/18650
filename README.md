@@ -2,24 +2,21 @@
 
 Arduino-based N-channel charger and discharge tester for 18650/21700 (or any other type) Li-ion batteries.
 
-The project uses INA3221 current/voltage monitors to track each channel and measures:
-
-* Charging time
-* Discharge capacity (mAh)
-* Internal resistance (mΩ)
-* Battery voltage and current
-
-A 16×2 LCD displays the current channel status and measurements. Each channel is controlled independently via a MOSFET-based discharge load.
+The project uses INA3221 current/voltage monitors, TP5100 charge modules and 16×2 LCD display to visualize current status in real-time. Each channel is controlled independently via a MOSFET-based discharge load.
 
 Features:
  - 4 fully independent measurement channels (expandable)
  - Convenient control of the charge/discharge mode via a physical switch
  - Automatic cut-off when battery is fully charged or discharged to certain value (setup in code)
+ - Real-time measurement of battery's voltage, current and capacity
  - Measurement of battery internal resistance using the voltage drop under load method (DC)
+ - Uses very cheap N-channel logical gate MOSFET, which is still capable to control up to 5.8A constatnt current
  - Max charge current: 1A (depends on TP5100 module)
  - Max discharge current: ~1.6A (depends on load resistance)
 
-It can be easily expanded to support an arbitrary number of batteries: each INA module handles up to three independent channels. I2C expanders can be used to accommodate a larger number of INA modules. Be sure that your power unit and wires is capable of N-Amps output current!
+It can be easily expanded to support an arbitrary number of batteries: each INA module handles up to three independent channels. I2C expanders can be used to accommodate a larger number of INA modules. Be sure that your power unit and wires is capable of N-Amps output current to power-up all charging modules!
+
+It is also possible to replace the TP5100 modules with standard TP4056 ones; this results in a lower maximum charging current and longer charging times, but provides more stable voltage.
 
 # Wiring diagram
 ![Breadboard](./breadboard.png)
