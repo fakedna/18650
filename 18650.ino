@@ -5,16 +5,21 @@
 #define PRINT_DEC_POINTS 3
 #define DEBUG_MODE false
 
-const uint8_t LCD_ADDR = 0x27;  //или 0х57
+// I2C address settings
+const uint8_t LCD_ADDR = 0x27;  //or 0х57
 const uint8_t INA3221_ADDR40_GND = 0x40;
 const uint8_t INA3221_ADDR41_VCC = 0x41;
+
+// Arduino PIN settings
 const uint8_t PIN_BUTTON = 6;
 const uint8_t PIN_Q[4] = { 5, 4, 3, 2 };
 
+// Module objects
 Adafruit_INA3221 ina3221_1;
 Adafruit_INA3221 ina3221_2;
-microLCD lcd(LCD_ADDR);  //Create object for display
+microLCD lcd(LCD_ADDR);
 
+// Data arrays
 float current[4] = { 0, 0, 0, 0 };
 float voltage[4] = { 0, 0, 0, 0 };
 float capacity[4] = { 0, 0, 0, 0 };
@@ -99,7 +104,7 @@ void CheckState(unsigned long currentTime) {
       // 1. Check for physical absence of the battery
       if (voltage_now < NO_BATTERY_VOLTAGE) {
         states[i] = 0;
-        digitalWrite(pin, LOW);  // Отключаем разрядную нагрузку
+        digitalWrite(pin, LOW);  // Disconnect the load
         times[i] = 0;
         capacity[i] = 0;
         ocv_voltage[i] = 0;
@@ -113,7 +118,7 @@ void CheckState(unsigned long currentTime) {
         if (prevState == 2) {    // If the battery was previously discharging
           states[i] = 4;         // Status: Discharge finished (DFN)
         }
-        continue;  // Move to the next channel
+        continue;
       }
 
       // 3. Analyze the current operating mode based on current
@@ -162,7 +167,7 @@ void CheckState(unsigned long currentTime) {
 
         if (prevState == 1) {
           // If the switch is still in the "Charge" position, but the current has dropped — charging is complete
-         states[i] = 3;  // CHG FIN
+          states[i] = 3;  // CHG FIN
           digitalWrite(pin, LOW);
         } else if (prevState == 2) {
           // If the battery was discharging, but the current disappeared — the switch was turned back or the battery protection was triggered
