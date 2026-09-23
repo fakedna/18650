@@ -37,11 +37,11 @@ It is also possible to replace the TP5100 modules with standard TP4056 ones; thi
 | R5-R8               |      4 | 10 kΩ resisor          | MOSFET pull-up                         |
 | R14-R17             |      4 | 2.7 Ω power resisor    | Discharge load resistor                |
 | LED1–LED4           |      4 | 3-5mm LED              | Discharge load indication              |
-| S1–S4               |      4 | SPDT switch            | 1A constant load capable               |
+| S1–S4               |      4 | SPDT switch            | 2A constant load capable               |
 | BAT1–BAT4           |      4 | Battery                | testing/charging batteries             |
-| V1                  |      1 | power unit / input     | 8-24V, 5+A (min 60W total power)       |
+| V1                  |      1 | power unit / input     | 8-18V, 5+A (min 60W total power)       |
 
-Not listed:
+**Not listed**:
  - Channel switch button (add it to any arduino pin of your choice)
  - 12-24V fan (for cooling load resistors and TP5100)
  - Heatsink (a standard 70x22mm SSD heatsink is ideal for four TP5100 modules, place it UNDER the modules via heat-resistant isolation tape)
