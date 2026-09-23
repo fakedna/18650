@@ -22,8 +22,8 @@ It is also possible to replace the TP5100 modules with standard TP4056 ones; thi
 # Reference wiring diagram
 ![Breadboard](./breadboard.png)
 
-# Сircuit diagram
-![Сircuit](./circuit.png)
+# Circuit diagram
+![Circuit](./circuit.png)
 
 # Components list
 | Ref.                | Pts    | Type                   | Comment                                |
