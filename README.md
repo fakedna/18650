@@ -11,11 +11,15 @@ The project uses INA3221 current/voltage monitors to track each channel and meas
 
 A 16×2 LCD displays the current channel status and measurements. Each channel is controlled independently via a MOSFET-based discharge load.
 
-Max charge current: 1A (depends on TP5100 module).
+Features:
+ - 4 fully independent measurement channels (expandable)
+ - Convenient control of the charge/discharge mode via a physical switch
+ - Automatic cut-off when battery is fully charged or discharged to certain value (setup in code)
+ - Measurement of battery internal resistance using the voltage drop under load method (DC)
+ - Max charge current: 1A (depends on TP5100 module)
+ - Max discharge current: ~1.6A (depends on load resistance)
 
-Max discharge current: ~1.6A (depends on load resistance).
-
-It can be easily expanded to support an arbitrary number of batteries: each INA module handles up to three independent channels. I2C expanders can be used to accommodate a larger number of INA modules.
+It can be easily expanded to support an arbitrary number of batteries: each INA module handles up to three independent channels. I2C expanders can be used to accommodate a larger number of INA modules. Be sure that your power unit and wires is capable of N-Amps output current!
 
 # Wiring diagram
 ![Breadboard](./breadboard.png)
