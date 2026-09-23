@@ -4,7 +4,7 @@ Arduino-based N-channel charger and discharge tester for 18650/21700 (or any oth
 
 The project uses INA3221 current/voltage monitors, TP5100 charge modules and 16×2 LCD display to visualize current status in real-time. Each channel is controlled independently via a MOSFET-based discharge load.
 
-Features:
+**Features**:
  - 4 fully independent measurement channels (expandable)
  - Convenient control of the charge/discharge mode via a physical switch
  - Automatic cut-off when battery is fully charged or discharged to certain value (setup in code)
