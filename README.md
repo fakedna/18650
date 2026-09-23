@@ -18,7 +18,7 @@ It can be easily expanded to support an arbitrary number of batteries: each INA 
 
 It is also possible to replace the TP5100 modules with standard TP4056 ones; this results in a lower maximum charging current and longer charging times, but provides more stable voltage.
 
-# Wiring diagram
+# Reference wiring diagram
 ![Breadboard](./breadboard.png)
 
 # Сircuit diagram
