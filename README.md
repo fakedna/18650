@@ -11,7 +11,7 @@ The project uses INA3221 current/voltage monitors, TP5100 charge modules and 16�
  - Real-time measurement of battery's voltage, current and capacity
  - Measurement of battery internal resistance using the voltage drop under load method (DC)
  - Uses very cheap N-channel logical gate MOSFET, which is still capable to control up to 5.8A constatnt current
- - Max charge current: 1A (depends on TP5100 module)
+ - Max charge current: 2A (depends on TP5100 module)
  - Max discharge current: ~1.6A (depends on load resistance)
 
 It can be easily expanded to support an arbitrary number of batteries: each INA module handles up to three independent channels. I2C expanders can be used to accommodate a larger number of INA modules. Be sure that your power unit and wires is capable of N-Amps output current to power-up all charging modules!
@@ -29,8 +29,8 @@ It is also possible to replace the TP5100 modules with standard TP4056 ones; thi
 | ------------------- | -----: | ---------------------- | -------------------------------------- |
 | Arduino             |      1 | Arduino Nano           | Rev. 3.0 used                          |
 | M2, M3              |      2 | INA3221 module         | separate channels version              |
-| M4–M7               |      4 | TP5100 module          | 1A charge current                      |
-| M1                  |      1 | LM2596 DC-DC converter | stable power supply to the logic circuitry  |
+| M4–M7               |      4 | TP5100 module          | 2A charge current                      |
+| M1                  |      1 | LM2596 DC-DC converter | stable 5V power supply to the logic circuitry  |
 | LCD                 |      1 | LCD with I²C-bus       | 1602 LCD or your choice                |
 | Q1–Q4               |      4 | AO3400 MOSFET          | alt name: A09T, SOT-23                 |
 | R2-R4, R9-R13       |      8 | 220 Ω resisor          | LED and Arduino pins protection        |
@@ -39,7 +39,7 @@ It is also possible to replace the TP5100 modules with standard TP4056 ones; thi
 | LED1–LED4           |      4 | 3-5mm LED              | Discharge load indication              |
 | S1–S4               |      4 | SPDT switch            | 2A constant load capable               |
 | BAT1–BAT4           |      4 | battery holder         | pay close attention to the polarity    |
-| V1                  |      1 | power unit / input     | 8-18V, 5+A (min 60W total power)       |
+| V1                  |      1 | power unit / input     | 6-18V, 5+A (min 60W total power)       |
 
 **Not listed**:
  - Channel switch button (add it to any arduino pin of your choice)
