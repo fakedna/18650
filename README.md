@@ -7,7 +7,8 @@ The project uses INA3221 current/voltage monitors, TP5100 charge modules and 16Ã
 **Features**:
  - 4 fully independent measurement channels (expandable)
  - Convenient control of the charge/discharge mode via a physical switch
- - Automatic cut-off when battery is fully charged or discharged to certain value (setup in code)
+ - Automatic start of the charging or discharging cycle upon battery installation
+ - Automatic cut-off when battery is fully charged or discharged to certain value (default 2.8V)
  - Real-time measurement of battery's voltage, current and capacity
  - Measurement of battery internal resistance using the voltage drop under load method (DC)
  - Uses very cheap N-channel logical gate MOSFET (AO3400 in SOT-23 package)
